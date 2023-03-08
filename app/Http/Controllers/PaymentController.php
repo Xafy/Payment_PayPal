@@ -26,6 +26,7 @@ class PaymentController extends Controller
     }
 
     public function pay(Request $req){
+        $req->validate(['amount' => 'required|numeric']);
         try {
             $response = $this->gateway->purchase(array(
                 'amount'        => $req->amount,
