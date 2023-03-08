@@ -19,4 +19,3 @@ Route::post('/pay', [PaymentController::class, 'pay'])->name('payment');
 Route::get('/success', [PaymentController::class, 'success'])->name('success');
 Route::get('/error', [PaymentController::class, 'error'])->name('error');
 Route::get('/payments', [PaymentController::class, 'showPayments'])->name('payments');
-Route::get('/payments/json', [PaymentController::class, 'paymentsJson'])->name('payments.json');
