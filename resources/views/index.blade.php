@@ -1,14 +1,14 @@
 @extends('layout')
 
 @section('content')
-
-@if (session()->has('success'))
-    @include('elements.success')
-@elseif (session()->has('error'))
-@include('elements.error')
-@endif
-
 <div class="text-center w-50 m-auto mt-5">
+    
+    @if (session()->has('success'))
+    @include('elements.success')
+    @elseif (session()->has('error'))
+    @include('elements.error')
+    @endif
+
     <form method="POST" action="{{route('payment')}}">
         @csrf
         <div class="mb-3">
